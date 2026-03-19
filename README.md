@@ -109,7 +109,7 @@ curl -s http://localhost:18789/v1/models \
 ## 二、开发模式部署（推荐调试）
 
 ```bash
-cd ./ui
+cd ./WestOdyssey
 
 # 安装依赖
 npm install
@@ -140,7 +140,7 @@ VITE_OPENCLAW_AUTH_TOKEN=<你的 token>
 #### 1. 构建
 
 ```bash
-cd ./ui
+cd ./WestOdyssey
 npm run build
 ```
 
@@ -153,7 +153,7 @@ server {
     listen 8080;
     server_name localhost;
 
-    root /path/to/ui/dist;
+    root /path/to/WestOdyssey/dist;
     index index.html;
 
     # SPA 路由回退
@@ -188,7 +188,7 @@ nginx -t && nginx -s reload
 ### 方案 B：Vite Preview（快速预览）
 
 ```bash
-cd ./ui
+cd ./WestOdyssey
 npm run build
 npm run preview    # 默认端口 4173
 ```
@@ -239,7 +239,7 @@ Body:
 ## 六、项目结构
 
 ```
-ui/
+WestOdyssey/
 ├── index.html                # 入口 HTML
 ├── package.json
 ├── vite.config.ts            # Vite 配置（含 Gateway 代理）
@@ -282,7 +282,7 @@ ui/
 openclaw gateway start
 
 # 2. 安装依赖并启动 ui
-cd ./ui
+cd ./WestOdyssey
 npm install
 npm run dev
 
